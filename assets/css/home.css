@@ -55,6 +55,94 @@
     transform: translateY(-2px);
 }
 
+/* Why ScholarQuest Section Styles */
+.why-section {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #FFD700;
+    border-radius: 2px;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 4rem;
+    align-items: center;
+}
+
+.features-image {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.features-image:hover .circle-image {
+    transform: scale(1.05);
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.feature-item h3 {
+    color: #1a73e8;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
 /* Footer Styles */
 .footer {
     background-color: #f8f9fa;
@@ -141,5 +229,164 @@
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .features-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature-item {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .features-image {
+        max-width: 300px;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Add these navbar styles to your existing CSS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #1557b0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 0.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1a73e8;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #1a73e8;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid #e0e0e0;
+}
+
+.login-link {
+    color: #1a73e8;
+}
+
+.login-link:hover {
+    color: #1557b0;
+}
+
+.get-started {
+    padding: 0.6rem 1.2rem;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #1557b0;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-auth {
+        margin-left: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-auth {
+        margin-left: 0.8rem;
+        padding-left: 0.8rem;
+    }
+
+    .get-started {
+        padding: 0.5rem 1rem;
     }
 } 
