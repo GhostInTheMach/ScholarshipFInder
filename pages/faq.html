@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Keep your existing navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="../assets/images/SQLogo.svg" alt="ScholarQuest" class="logo-img">
+                    ScholarQuest
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/scholarships" class="nav-item">Find Scholarships</a>
+                <a href="/about" class="nav-item">About Us</a>
+                <a href="/faq" class="nav-item active">FAQ</a>
+                <div class="nav-auth">
+                    <a href="/login" class="nav-item login-link">Log In</a>
+                    <a href="/signup" class="get-started">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="faq-container">
         <section class="faq-hero">
@@ -89,5 +107,53 @@
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="../assets/images/SQLogo.svg" alt="ScholarQuest" class="footer-logo">
+                    <h3>ScholarQuest</h3>
+                    <p>Empowering students to achieve their educational dreams through accessible scholarship opportunities.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Quick Links</h4>
+                    <a href="/scholarships">Find Scholarships</a>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/blog">Blog</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Resources</h4>
+                    <a href="/providers">For Providers</a>
+                    <a href="/counselors">For Counselors</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/support">Support</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> support@scholarquest.com</p>
+                    <p><i class="fas fa-phone"></i> +256 775 071 934</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 45, Kampala Road<br>Kampala, Uganda</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 ScholarQuest. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/cookies">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
