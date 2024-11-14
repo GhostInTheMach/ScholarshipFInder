@@ -380,4 +380,103 @@
     .footer-left, .footer-center, .footer-right {
         width: 100%;
     }
+}
+
+/* Add these navbar styles at the top of the file (before .about-container) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #1557b0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 0.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1a73e8;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #1a73e8;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid #e0e0e0;
+}
+
+.login-link {
+    color: #1a73e8;
+}
+
+.get-started {
+    padding: 0.6rem 1.2rem;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #1557b0;
+}
+
+/* Add responsive styles for navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-auth {
+        margin-left: 1rem;
+        padding-left: 1rem;
+    }
 } 
