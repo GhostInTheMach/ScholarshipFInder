@@ -1,0 +1,145 @@
+/* Hero Section Styles */
+.hero-section {
+    background-color: #1a73e8;
+    color: white;
+    padding: 4rem var(--spacing-unit);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .highlight {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-image {
+    max-width: 500px;
+    margin-left: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #1a73e8;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 4rem var(--spacing-unit) 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: #1a73e8;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: #666;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #1a73e8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem var(--spacing-unit);
+    }
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        margin-left: 0;
+        max-width: 400px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content .highlight {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+} 

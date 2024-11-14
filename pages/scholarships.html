@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Scholarships - ScholarQuest</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/scholarships.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/">ScholarQuest</a>
+        </div>
+        <div class="nav-links">
+            <a href="/pages/scholarships.html" class="active">Find Scholarships</a>
+            <a href="/pages/login.html">Login</a>
+            <a href="/pages/signup.html" class="btn-primary">Sign Up</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search scholarships..." class="search-input">
+                <div class="filters">
+                    <select class="filter-select">
+                        <option value="">Category</option>
+                        <option value="academic">Academic</option>
+                        <option value="sports">Sports</option>
+                        <option value="arts">Arts</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Amount</option>
+                        <option value="0-5000">$0 - $5,000</option>
+                        <option value="5000-10000">$5,000 - $10,000</option>
+                        <option value="10000+">$10,000+</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="scholarships-grid">
+            <!-- Scholarship cards will be dynamically added here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ScholarQuest. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/scholarships.js"></script>
+</body>
+</html> 

@@ -1,0 +1,236 @@
+.scholarship-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem var(--spacing-unit);
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.scholarship-hero {
+    background: linear-gradient(to right, var(--primary-color), darken(var(--primary-color), 10%));
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.scholarship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.scholarship-provider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scholarship-provider img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: white;
+    padding: 0.5rem;
+}
+
+.key-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item .label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.info-item .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Main Content Layout */
+.scholarship-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.content-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Sidebar Styles */
+.action-card, .info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.deadline-info {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.countdown-item {
+    background: var(--background-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.countdown-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 1rem;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list .icon {
+    font-size: 1.5rem;
+}
+
+/* Requirements and Documents Lists */
+.requirements-list, .documents-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements-list li, .documents-list li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.requirements-list li:before, .documents-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Application Steps */
+.application-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+}
+
+.step-number {
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .scholarship-content {
+        grid-template-columns: 1fr;
+    }
+
+    .scholarship-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .key-info {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .scholarship-hero {
+        padding: 2rem 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .key-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+} 
