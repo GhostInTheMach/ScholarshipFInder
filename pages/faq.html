@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - ScholarQuest</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Keep your existing navbar -->
+
+    <main class="faq-container">
+        <section class="faq-hero">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about ScholarQuest</p>
+            
+            <div class="faq-search">
+                <input type="text" placeholder="Search questions..." id="faqSearch">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="general">General</button>
+                <button class="category-btn" data-category="application">Applications</button>
+                <button class="category-btn" data-category="eligibility">Eligibility</button>
+                <button class="category-btn" data-category="providers">For Providers</button>
+            </div>
+        </section>
+
+        <section class="faq-content">
+            <div class="faq-group" data-category="general">
+                <h2>General Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is ScholarQuest?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ScholarQuest is a platform that connects students with scholarship opportunities. We verify and curate scholarships to ensure they are legitimate and match them with eligible students.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is ScholarQuest free to use?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! ScholarQuest is completely free for students. We believe in making education accessible to everyone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-group" data-category="application">
+                <h2>Application Process</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I apply for scholarships?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Create an account, complete your profile, and our matching system will show you relevant scholarships. Click "Apply" to start your application process.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more FAQ groups as needed -->
+        </section>
+
+        <section class="still-have-questions">
+            <div class="question-card">
+                <h2>Still Have Questions?</h2>
+                <p>Can't find what you're looking for? We're here to help!</p>
+                <div class="support-options">
+                    <a href="/contact" class="support-btn">
+                        <i class="fas fa-envelope"></i>
+                        Contact Support
+                    </a>
+                    <a href="/chat" class="support-btn">
+                        <i class="fas fa-comments"></i>
+                        Live Chat
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
