@@ -9,13 +9,25 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <a href="/">ScholarQuest</a>
-        </div>
-        <div class="nav-links">
-            <a href="/pages/scholarships.html" class="active">Find Scholarships</a>
-            <a href="/pages/login.html">Login</a>
-            <a href="/pages/signup.html" class="btn-primary">Sign Up</a>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="../assets/images/logo.svg" alt="ScholarQuest" class="logo-image">
+                    ScholarQuest
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-input">
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="/pages/login.html" class="nav-link">Sign In</a>
+                <button class="profile-button">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -107,8 +119,52 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 ScholarQuest. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ScholarQuest</h4>
+                <p>Empowering students to achieve their educational dreams through scholarship opportunities.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/pages/scholarships.html">Find Scholarships</a></li>
+                    <li><a href="/pages/how-it-works.html">How It Works</a></li>
+                    <li><a href="/pages/resources.html">Resources</a></li>
+                    <li><a href="/pages/success-stories.html">Success Stories</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/pages/faq.html">FAQ</a></li>
+                    <li><a href="/pages/contact.html">Contact Us</a></li>
+                    <li><a href="/pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Stay updated with new scholarships and tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 ScholarQuest. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="../assets/js/scholarships.js"></script>
