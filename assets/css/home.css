@@ -433,4 +433,75 @@
     .get-started {
         padding: 0.5rem 1rem;
     }
+}
+
+/* Add these styles for the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.dropdown-item h3 {
+    color: #1a73e8;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-item p {
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Add responsive styles for dropdown */
+@media (max-width: 768px) {
+    .dropdown-content {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-content {
+        min-width: 250px;
+        left: -50px; /* Adjust position for small screens */
+    }
 } 
