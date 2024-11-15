@@ -20,74 +20,90 @@
     </nav>
 
     <main class="scholarships-container">
-        <section class="hero-section">
-            <h1>Discover Your Perfect Scholarship</h1>
-            <p>Browse through thousands of verified opportunities</p>
-        </section>
-
-        <section class="search-section">
-            <div class="search-container">
-                <div class="search-bar">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" placeholder="Search scholarships..." class="search-input">
+        <header class="scholarship-header">
+            <h1>Scholarship Search</h1>
+            <div class="header-search">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search by scholarship name">
                 </div>
-                <div class="filters">
-                    <select class="filter-select">
-                        <option value="">Category</option>
-                        <option value="academic">Academic Merit</option>
-                        <option value="sports">Athletic</option>
-                        <option value="arts">Arts & Creative</option>
-                        <option value="stem">STEM</option>
-                        <option value="community">Community Service</option>
-                        <option value="diversity">Diversity & Inclusion</option>
-                    </select>
-                    <select class="filter-select">
-                        <option value="">Award Amount</option>
-                        <option value="0-5000">Up to $5,000</option>
-                        <option value="5000-10000">$5,000 - $10,000</option>
-                        <option value="10000-25000">$10,000 - $25,000</option>
-                        <option value="25000+">$25,000+</option>
-                    </select>
-                    <select class="filter-select">
-                        <option value="">Deadline</option>
-                        <option value="1month">Within 1 Month</option>
-                        <option value="3months">Within 3 Months</option>
-                        <option value="6months">Within 6 Months</option>
-                    </select>
+                <div class="saved-scholarships">
+                    <i class="far fa-bookmark"></i>
+                    <span>Saved Scholarships (0)</span>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="scholarships-grid">
-            <!-- Example scholarship cards -->
-            <div class="scholarship-card">
-                <div class="card-badge">Featured</div>
-                <div class="card-header">
-                    <h3>Gates Millennium Scholars Program</h3>
-                    <span class="amount">$25,000</span>
+        <div class="hero-banner">
+            <h2>Find the right scholarships for you</h2>
+        </div>
+
+        <div class="search-results-container">
+            <div class="filters-sidebar">
+                <h3>Filters</h3>
+                <p class="filter-subtitle">Narrow your search with the filters below.</p>
+                
+                <div class="filter-group">
+                    <h4>Location</h4>
+                    <!-- Add expandable content -->
                 </div>
-                <div class="scholarship-info">
-                    <p class="category"><i class="fas fa-graduation-cap"></i> Academic Merit</p>
-                    <p class="deadline"><i class="fas fa-clock"></i> Deadline: March 31, 2024</p>
-                    <p class="eligibility"><i class="fas fa-check-circle"></i> Open to all undergraduate students</p>
+                <div class="filter-group">
+                    <h4>Academic Stage</h4>
+                    <!-- Add expandable content -->
                 </div>
-                <div class="card-actions">
-                    <button class="save-btn"><i class="far fa-bookmark"></i></button>
-                    <a href="#" class="apply-btn">Apply Now</a>
-                </div>
+                <!-- Add more filter groups as needed -->
             </div>
 
-            <!-- Add more scholarship cards with different styles -->
-            <div class="scholarship-card urgent">
-                <div class="card-badge">Urgent</div>
-                <!-- Similar structure as above -->
+            <div class="scholarships-content">
+                <div class="results-header">
+                    <span class="results-count">27,196 Results</span>
+                    <div class="results-actions">
+                        <button class="save-search-btn">Save Search</button>
+                        <button class="share-btn">Share</button>
+                        <select class="sort-select">
+                            <option>Deadline (Nearest First)</option>
+                            <!-- Add more sort options -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="scholarships-grid">
+                    <!-- Modified scholarship card structure -->
+                    <div class="scholarship-card">
+                        <div class="deadline-badge">Deadline Soon</div>
+                        <div class="award-amount">Win up to $500</div>
+                        <h3 class="scholarship-title">Central Florida Kidney Centers, Inc. Endowed Scholarship</h3>
+                        <div class="scholarship-details">
+                            <div class="date-range">
+                                <div class="opens">
+                                    <span>Opens</span>
+                                    <date>10/02/2024</date>
+                                </div>
+                                <div class="closes">
+                                    <span>Closes</span>
+                                    <date>11/16/2024</date>
+                                </div>
+                            </div>
+                            <div class="requirements">
+                                <div class="req-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span>Merit-Based: No</span>
+                                </div>
+                                <div class="req-item">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <span>Need-Based: No</span>
+                                </div>
+                                <div class="req-item">
+                                    <i class="fas fa-pen"></i>
+                                    <span>Essay Required: No</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+                    </div>
+                    <!-- Add more scholarship cards -->
+                </div>
             </div>
-
-            <!-- Continue with more cards -->
-        </section>
-
-        <div class="load-more">
-            <button class="load-more-btn">Load More Scholarships</button>
         </div>
     </main>
 
