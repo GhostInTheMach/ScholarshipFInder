@@ -363,3 +363,35 @@
         text-align: center;
     }
 } 
+
+/* Add these styles for FAQ animations */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.faq-item {
+    cursor: pointer;
+    border: 1px solid rgba(26, 115, 232, 0.1);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Add hover effect for FAQ items */
+.faq-item:hover {
+    border-color: #1a73e8;
+    transform: translateX(5px);
+} 
