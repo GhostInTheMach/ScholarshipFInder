@@ -19,30 +19,76 @@
         </div>
     </nav>
 
-    <main>
+    <main class="scholarships-container">
+        <section class="hero-section">
+            <h1>Discover Your Perfect Scholarship</h1>
+            <p>Browse through thousands of verified opportunities</p>
+        </section>
+
         <section class="search-section">
             <div class="search-container">
-                <input type="text" placeholder="Search scholarships..." class="search-input">
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Search scholarships..." class="search-input">
+                </div>
                 <div class="filters">
                     <select class="filter-select">
                         <option value="">Category</option>
-                        <option value="academic">Academic</option>
-                        <option value="sports">Sports</option>
-                        <option value="arts">Arts</option>
+                        <option value="academic">Academic Merit</option>
+                        <option value="sports">Athletic</option>
+                        <option value="arts">Arts & Creative</option>
+                        <option value="stem">STEM</option>
+                        <option value="community">Community Service</option>
+                        <option value="diversity">Diversity & Inclusion</option>
                     </select>
                     <select class="filter-select">
-                        <option value="">Amount</option>
-                        <option value="0-5000">$0 - $5,000</option>
+                        <option value="">Award Amount</option>
+                        <option value="0-5000">Up to $5,000</option>
                         <option value="5000-10000">$5,000 - $10,000</option>
-                        <option value="10000+">$10,000+</option>
+                        <option value="10000-25000">$10,000 - $25,000</option>
+                        <option value="25000+">$25,000+</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Deadline</option>
+                        <option value="1month">Within 1 Month</option>
+                        <option value="3months">Within 3 Months</option>
+                        <option value="6months">Within 6 Months</option>
                     </select>
                 </div>
             </div>
         </section>
 
         <section class="scholarships-grid">
-            <!-- Scholarship cards will be dynamically added here -->
+            <!-- Example scholarship cards -->
+            <div class="scholarship-card">
+                <div class="card-badge">Featured</div>
+                <div class="card-header">
+                    <h3>Gates Millennium Scholars Program</h3>
+                    <span class="amount">$25,000</span>
+                </div>
+                <div class="scholarship-info">
+                    <p class="category"><i class="fas fa-graduation-cap"></i> Academic Merit</p>
+                    <p class="deadline"><i class="fas fa-clock"></i> Deadline: March 31, 2024</p>
+                    <p class="eligibility"><i class="fas fa-check-circle"></i> Open to all undergraduate students</p>
+                </div>
+                <div class="card-actions">
+                    <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Add more scholarship cards with different styles -->
+            <div class="scholarship-card urgent">
+                <div class="card-badge">Urgent</div>
+                <!-- Similar structure as above -->
+            </div>
+
+            <!-- Continue with more cards -->
         </section>
+
+        <div class="load-more">
+            <button class="load-more-btn">Load More Scholarships</button>
+        </div>
     </main>
 
     <footer>
