@@ -6,6 +6,7 @@
     <title>Available Scholarships - ScholarQuest</title>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/scholarships.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -52,18 +53,76 @@
 
         <div class="search-results-container">
             <div class="filters-sidebar">
-                <h3>Filters</h3>
+                <h3>Filters <span class="filter-count">2</span></h3>
                 <p class="filter-subtitle">Narrow your search with the filters below.</p>
                 
                 <div class="filter-group">
-                    <h4>Location</h4>
-                    <!-- Add expandable content -->
+                    <div class="filter-header" onclick="toggleFilter('location')">
+                        <span>Location</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="filter-content" id="location-filter">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="uganda"> Uganda</label>
+                            <label><input type="checkbox" value="kenya"> Kenya</label>
+                            <label><input type="checkbox" value="tanzania"> Tanzania</label>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="filter-group">
-                    <h4>Academic Stage</h4>
-                    <!-- Add expandable content -->
+                    <div class="filter-header" onclick="toggleFilter('academic-stage')">
+                        <span>Academic Stage</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="filter-content" id="academic-stage-filter">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="undergraduate"> Undergraduate</label>
+                            <label><input type="checkbox" value="postgraduate"> Postgraduate</label>
+                            <label><input type="checkbox" value="doctoral"> Doctoral</label>
+                        </div>
+                    </div>
                 </div>
-                <!-- Add more filter groups as needed -->
+
+                <div class="filter-group">
+                    <div class="filter-header" onclick="toggleFilter('gpa')">
+                        <span>GPA</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="filter-content" id="gpa-filter">
+                        <div class="range-slider">
+                            <input type="range" min="0" max="4" step="0.1" value="3" class="gpa-range">
+                            <span class="gpa-value">3.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header" onclick="toggleFilter('scholarship-type')">
+                        <span>Scholarship Type</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="filter-content" id="scholarship-type-filter">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="merit"> Merit Based</label>
+                            <label><input type="checkbox" value="need"> Need Based</label>
+                            <label><input type="checkbox" value="academic"> Academic</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-header" onclick="toggleFilter('field-study')">
+                        <span>Fields of Study</span>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="filter-content show" id="field-study-filter">
+                        <div class="search-field">
+                            <input type="text" placeholder="Search by name">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="scholarships-content">
