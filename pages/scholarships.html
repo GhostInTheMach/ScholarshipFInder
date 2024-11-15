@@ -63,9 +63,9 @@
                     </div>
                     <div class="filter-content" id="location-filter">
                         <div class="checkbox-group">
-                            <label><input type="checkbox" value="uganda"> Uganda</label>
-                            <label><input type="checkbox" value="kenya"> Kenya</label>
-                            <label><input type="checkbox" value="tanzania"> Tanzania</label>
+                            <label><input type="checkbox" name="location" value="uganda"> Uganda</label>
+                            <label><input type="checkbox" name="location" value="kenya"> Kenya</label>
+                            <label><input type="checkbox" name="location" value="tanzania"> Tanzania</label>
                         </div>
                     </div>
                 </div>
@@ -77,22 +77,26 @@
                     </div>
                     <div class="filter-content" id="academic-stage-filter">
                         <div class="checkbox-group">
-                            <label><input type="checkbox" value="undergraduate"> Undergraduate</label>
-                            <label><input type="checkbox" value="postgraduate"> Postgraduate</label>
-                            <label><input type="checkbox" value="doctoral"> Doctoral</label>
+                            <label><input type="checkbox" name="stage" value="undergraduate"> Undergraduate</label>
+                            <label><input type="checkbox" name="stage" value="postgraduate"> Postgraduate</label>
+                            <label><input type="checkbox" name="stage" value="doctoral"> Doctoral</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="filter-group">
                     <div class="filter-header" onclick="toggleFilter('gpa')">
-                        <span>GPA</span>
+                        <span>GPA Range</span>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="filter-content" id="gpa-filter">
                         <div class="range-slider">
-                            <input type="range" min="0" max="4" step="0.1" value="3" class="gpa-range">
                             <span class="gpa-value">3.0</span>
+                            <input type="range" class="gpa-range" min="0" max="4" step="0.1" value="3.0">
+                            <div class="range-labels">
+                                <span>0.0</span>
+                                <span>4.0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,9 +108,9 @@
                     </div>
                     <div class="filter-content" id="scholarship-type-filter">
                         <div class="checkbox-group">
-                            <label><input type="checkbox" value="merit"> Merit Based</label>
-                            <label><input type="checkbox" value="need"> Need Based</label>
-                            <label><input type="checkbox" value="academic"> Academic</label>
+                            <label><input type="checkbox" name="type" value="merit"> Merit Based</label>
+                            <label><input type="checkbox" name="type" value="need"> Need Based</label>
+                            <label><input type="checkbox" name="type" value="academic"> Academic</label>
                         </div>
                     </div>
                 </div>
@@ -114,12 +118,12 @@
                 <div class="filter-group">
                     <div class="filter-header" onclick="toggleFilter('field-study')">
                         <span>Fields of Study</span>
-                        <i class="fas fa-minus"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
-                    <div class="filter-content show" id="field-study-filter">
+                    <div class="filter-content" id="field-study-filter">
                         <div class="search-field">
-                            <input type="text" placeholder="Search by name">
                             <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search fields of study" id="field-study-search">
                         </div>
                     </div>
                 </div>

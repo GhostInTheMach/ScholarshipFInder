@@ -71,4 +71,27 @@ function viewDetails(id) {
 function saveScholarship(id) {
     // This would typically interact with a backend
     alert('Please log in to save scholarships');
-} 
+}
+
+// Add these functions after your existing code
+function toggleFilter(filterId) {
+    const content = document.getElementById(`${filterId}-filter`);
+    const header = content.previousElementSibling;
+    const icon = header.querySelector('i');
+    
+    content.classList.toggle('show');
+    icon.classList.toggle('fa-plus');
+    icon.classList.toggle('fa-minus');
+}
+
+// GPA Range functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const gpaRange = document.querySelector('.gpa-range');
+    const gpaValue = document.querySelector('.gpa-value');
+    
+    if (gpaRange && gpaValue) {
+        gpaRange.addEventListener('input', function() {
+            gpaValue.textContent = parseFloat(this.value).toFixed(1);
+        });
+    }
+}); 

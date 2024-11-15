@@ -659,39 +659,36 @@
 
 .filter-content {
     display: none;
-    padding-bottom: 1rem;
+    padding: 0.5rem 0;
 }
 
 .filter-content.show {
     display: block;
 }
 
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #444;
-    cursor: pointer;
-}
-
 .range-slider {
-    padding: 0 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .gpa-range {
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
 }
 
 .gpa-value {
+    display: block;
+    text-align: center;
     color: #1a73e8;
     font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
 .search-field {
@@ -712,4 +709,16 @@
     top: 50%;
     transform: translateY(-50%);
     color: #666;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    cursor: pointer;
 } 
