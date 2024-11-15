@@ -504,4 +504,62 @@
         min-width: 250px;
         left: -50px; /* Adjust position for small screens */
     }
+}
+
+/* Add these enhanced dropdown styles after your existing dropdown styles */
+.dropdown-icon {
+    background: rgba(26, 115, 232, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a73e8;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-text {
+    flex: 1;
+}
+
+.dropdown-item a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: rgba(26, 115, 232, 0.1);
+    margin: 0.25rem 0;
+}
+
+.dropdown-item:hover .dropdown-icon {
+    background: #1a73e8;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Update existing dropdown styles */
+.dropdown-content {
+    min-width: 320px;
+    padding: 0.75rem;
+    border: 1px solid rgba(26, 115, 232, 0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 480px) {
+    .dropdown-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+    
+    .dropdown-item a {
+        gap: 0.75rem;
+    }
 } 
