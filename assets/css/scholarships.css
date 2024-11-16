@@ -17,7 +17,7 @@
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,7 +103,7 @@
 .scholarships-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .hero-section {
@@ -385,8 +385,8 @@
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 2rem;
-    padding: 2rem;
-    max-width: 1400px;
+    padding: 2rem 1rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -472,6 +472,7 @@
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -721,4 +722,11 @@
 
 .checkbox-group input[type="checkbox"] {
     cursor: pointer;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 } 
