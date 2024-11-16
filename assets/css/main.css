@@ -1,9 +1,24 @@
 :root {
     --primary-color: #4A90E2;
-    --secondary-color: #2C3E50;
-    --background-color: #F5F7FA;
-    --text-color: #333333;
-    --spacing-unit: 1rem;
+    --primary-light: #6BA4E9;
+    --primary-dark: #2E5C9E;
+    --secondary-color: #7E57C2;
+    --secondary-light: #9575CD;
+    --secondary-dark: #5E35B1;
+    --bg-primary: #F5F7FA;
+    --bg-secondary: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-gradient: linear-gradient(135deg, #4A90E2, #7E57C2);
+    --text-primary: #2C3E50;
+    --text-secondary: #546E7A;
+    --text-light: #78909C;
+    --accent-success: #66BB6A;
+    --accent-warning: #FFA726;
+    --accent-danger: #EF5350;
+    --border-color: #E0E6ED;
+    --shadow-sm: 0 2px 4px rgba(74, 144, 226, 0.1);
+    --shadow-md: 0 4px 6px rgba(74, 144, 226, 0.15);
+    --shadow-lg: 0 8px 16px rgba(74, 144, 226, 0.2);
 }
 
 * {
@@ -29,7 +44,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background: var(--bg-gradient);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -46,4 +61,67 @@ body {
     .nav-links {
         display: none; /* Will be replaced with a mobile menu */
     }
+} 
+
+.scholarship-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.hero-section {
+    background: var(--bg-gradient);
+    color: white;
+}
+
+.filters-sidebar {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.deadline-badge {
+    background: var(--accent-warning);
+    color: var(--text-primary);
+}
+
+.nav-link:hover, .profile-button:hover {
+    color: var(--primary-color);
+}
+
+.btn-secondary {
+    background: var(--bg-secondary);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+} 
+
+/* Add these logo styles */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo span {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.logo a:hover .logo-image {
+    transform: scale(1.05);
 } 
