@@ -15,9 +15,9 @@
 }
 
 .nav-container {
-    max-width: 99%;
-    margin: 0 auto;
-    padding: 0.5rem 0.25rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +31,7 @@
     color: var(--text-dark);
     font-size: 1.25rem;
     font-weight: 600;
+    padding-left: 0;
 }
 
 .logo-image {
@@ -42,13 +43,16 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-left: auto;
+    padding-right: 1rem;
 }
 
 .search-container {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
 }
 
 .search-input {
