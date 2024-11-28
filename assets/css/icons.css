@@ -1,0 +1,19 @@
+:root {
+  --icon-size-sm: 16px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 32px;
+}
+
+.icon {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.icon--sm { width: var(--icon-size-sm); height: var(--icon-size-sm); }
+.icon--lg { width: var(--icon-size-lg); height: var(--icon-size-lg); }
+.icon--primary { color: var(--primary-color); }
+.icon--light { color: var(--text-light); } 
