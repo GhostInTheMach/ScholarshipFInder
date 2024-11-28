@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Function to handle login form submission
 async function handleLogin(e) {
     e.preventDefault();
     const email = document.getElementById('email').value;
@@ -23,10 +24,24 @@ async function handleLogin(e) {
             throw new Error('Please fill in all fields');
         }
 
-        // This would typically be an API call
-        // For now, we'll simulate a successful login
-        await simulateApiCall({ email, password });
-        
+        // Submit the login data to the backend
+        const response = await fetch('../src/backend/login.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                email: email,
+                password: password,
+            }),
+        });
+
+        // Check if the response is OK
+        if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(errorMessage || 'Login failed. Please try again.');
+        }
+
         // Redirect to dashboard on success
         window.location.href = '/pages/dashboard.html';
     } catch (error) {
@@ -34,6 +49,8 @@ async function handleLogin(e) {
     }
 }
 
+
+// Function to handle signup form submission
 async function handleSignup(e) {
     e.preventDefault();
     const fullName = document.getElementById('fullName').value;
@@ -56,11 +73,25 @@ async function handleSignup(e) {
             throw new Error('Password must be at least 8 characters and contain a number');
         }
 
-        // This would typically be an API call
-        await simulateApiCall({ fullName, email, password });
-        
-        // Redirect to dashboard on success
-        window.location.href = '/pages/dashboard.html';
+        // Submit the form data to the backend
+        const response = await fetch('../src/backend/signup.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                fullName: fullName,
+                email: email,
+                password: password,
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Signup failed. Please try again.');
+        }
+
+        // Redirect to login page on success
+        window.location.href = '/pages/login.html';
     } catch (error) {
         errorElement.textContent = error.message;
     }

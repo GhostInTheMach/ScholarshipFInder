@@ -82,7 +82,7 @@ function loadApplications() {
             deadline: '2024-06-30',
             progress: 75
         },
-        // Add more applications
+        //will be modified later to handle dynamic cards 
     ];
 
     applicationsList.innerHTML = applications.map(app => `
@@ -105,7 +105,7 @@ function loadSavedScholarships() {
             amount: '$10,000',
             deadline: '2024-07-15'
         },
-        // Add more saved scholarships
+        // will be added later to handle dynamic saved scholarships
     ];
 
     savedList.innerHTML = saved.map(scholarship => `
