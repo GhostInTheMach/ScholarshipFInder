@@ -17,7 +17,7 @@
             <h2>Create Account</h2>
             <p class="auth-subtitle">Join ScholarQuest to start your scholarship journey</p>
 
-            <form action="../src/backend/signup.php" method="POST" id="signupForm" class="auth-form">
+            <form action="signup.php" method="POST" id="signupForm" class="auth-form">
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" required placeholder="Full Name">
@@ -53,5 +53,43 @@
     </main>
 
     <script src="../assets/js/auth.js"></script>
+
+    <?php
+    // Include the database connection file
+    require_once '../src/backend/db.php';
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $fullname = trim($_POST['fullName']);
+        $email = trim($_POST['email']);
+        $password = $_POST['password'];
+        $confirmPassword = $_POST['confirmPassword'];
+
+        // Validate password length
+        if (strlen($password) < 8 || !preg_match('/\d/', $password)) {
+            echo "<script>document.getElementById('signupError').innerText = 'Password must be at least 8 characters long and include a number.';</script>";
+        } elseif ($password !== $confirmPassword) {
+            echo "<script>document.getElementById('signupError').innerText = 'Passwords do not match.';</script>";
+        } else {
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+            try {
+                $stmt = $pdo->prepare("INSERT INTO users (fullname, email, password) VALUES (:fullname, :email, :password)");
+                $stmt->execute([
+                    ':fullname' => $fullname,
+                    ':email' => $email,
+                    ':password' => $hashedPassword,
+                ]);
+
+                echo "<script>alert('Signup successful! Redirecting to login page.'); window.location.href='login.html';</script>";
+            } catch (PDOException $e) {
+                if ($e->getCode() == 23000) { // Duplicate entry error (email already registered)
+                    echo "<script>document.getElementById('signupError').innerText = 'Email is already registered.';</script>";
+                } else {
+                    echo "<script>document.getElementById('signupError').innerText = 'Error: " . $e->getMessage() . "';</script>";
+                }
+            }
+        }
+    }
+    ?>
 </body>
-</html> 
+</html>
